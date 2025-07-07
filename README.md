@@ -81,5 +81,32 @@ Richiede un OTP per un indirizzo email.
     - 200 OK: OTP inviato con successo.
     - 400 Bad Request: email non valida.
 
+ ### `POST /auth/verify-otp`
+
+
+  #### Request Body
+
+```json
+
+{
+
+  "email": "utente@example.com",
+  "otp": "123456"
+
+}
+
+```
+
+#### Response
+
+    - 200 OK: autenticazione avvenuta con successo
+    - 401 Unauthorized: OTP errato o scaduto.
+
+
+
+
+
+
+
 
 
